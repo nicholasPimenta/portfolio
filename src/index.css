@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@layer base {
+  h1, h2, h3 {
+    font-family: "Sora", sans-serif;
+  }
+  body {
+    background-color: #0c1018;
+    color: #fefefe;
+    font-family: "Manrope", sans-serif;
+  }
+}
+
+@theme {
+  --color-main: #7095ff;
+  --color-accent: #aac1ff;
+}
