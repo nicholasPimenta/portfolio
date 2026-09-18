@@ -68,14 +68,14 @@ function Projects() {
   };
 
   return (
-    <section id="projetos" className="px-8 md:px-11 py-14 mx-auto max-w-3xl">
+    <section id="projetos" className="px-8 md:px-11 py-14 mx-auto max-w-6xl">
       <div className="flex flex-row justify-start items-center gap-3 mb-8">
         <span className="border rounded-b-xl rounded-t-[50%] w-10 h-10 grid place-items-center text-accent">
           01
         </span>
         <h2 className="text-xl md:text-3xl font-medium">Projetos</h2>
       </div>
-      <article aria-labelledby="form-title">
+      <article aria-labelledby="form-title" className="border border-x-transparent border-t-transparent border-b-border-card mb-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-16">
           <div className="grid min-w-0 gap-2">
             <figure className="bg-background-card border border-border-card p-1 md:p-2 rounded-xl md:rounded-2xl">
@@ -111,7 +111,7 @@ function Projects() {
               id="form-title"
               className="text-lg md:text-2xl leading-[1.3] font-medium tracking-tight"
             >
-              Formulário de Impressão do Urologista
+              Formulário de Impressão
             </h3>
             <p className="text-text text-sm md:text-base">
               Da necessidade ao formulário: uma interface de preenchimento e um
@@ -285,7 +285,7 @@ function Projects() {
           </figure>
         </div>
       </article>
-      <article aria-labelledby="weather-title">
+      <article aria-labelledby="weather-title" className="border border-x-transparent border-t-transparent border-b-border-card mb-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-16">
           <div className="grid min-w-0 gap-2">
             <figure className="bg-background-card border border-border-card p-1 md:p-2 rounded-xl md:rounded-2xl">
@@ -459,7 +459,7 @@ function Projects() {
           </div>
         </div>
       </article>
-      <article aria-labelledby="lenovo-title">
+      <article aria-labelledby="lenovo-title" className="border border-x-transparent border-t-transparent border-b-border-card mb-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-16">
           <div className="grid min-w-0 gap-2">
             <figure className="bg-background-card border border-border-card p-1 md:p-2 rounded-xl md:rounded-2xl">
