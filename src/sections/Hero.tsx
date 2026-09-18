@@ -5,10 +5,10 @@ function Hero() {
     <section id="hero" className="mb-12">
       <div className="container flex flex-col justify-between items-center mx-auto pt-12 sm:pt-20 pb-6 gap-6 text-center">
         <p className="text-text">Desenvolvedor Front-End</p>
-        <h1 className="text-4xl sm:text-7xl font-medium tracking-tight text-balance px-4 sm:px-0">
+        <h1 className="text-4xl md:text-7xl font-medium tracking-tight text-balance px-4 sm:px-0">
           Nicholas Pimenta
         </h1>
-        <h2 className="text-[22px] sm:text-3xl tracking-tight leading-[1.4] font-medium">
+        <h2 className="text-[22px] md:text-3xl tracking-tight leading-[1.4] font-medium">
           Interfaces bem pensadas,
           <br />
           <span className="text-accent">do design ao código.</span>
