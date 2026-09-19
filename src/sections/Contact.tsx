@@ -1,9 +1,57 @@
+import { BriefcaseBusiness, CodeXml, Copy } from "lucide-react";
+
 function Contact() {
   return (
-    <section>
-      <h2>Contato</h2>
+    <section id="contato" className="border-b border-line mb-12">
+      <div className="px-6 md:px-11 py-6 mx-auto max-w-6xl">
+        <div className="flex flex-row justify-start items-center gap-3 mb-4">
+          <span className="border rounded-b-xl rounded-t-[50%] w-10 h-10 grid place-items-center text-accent">
+            03
+          </span>
+          <h2 className="text-xl md:text-3xl font-medium">Contato</h2>
+        </div>
+        <div className="mb-6">
+          <h3 className="font-medium text-2xl md:text-3xl">
+            Tem uma oportunidade em Front-End?
+          </h3>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-32">
+          <div className="flex flex-col gap-4 items-start justify-start self-center">
+            <p className="text-xl text-text">nicholas2ilva@gmail.com</p>
+            <button
+              type="button"
+              className="flex flex-row justify-center items-center gap-2  bg-button-hover hover:bg-background-card border border-main hover:border-accent text-main hover:text-text duration-200 ease-linear px-3 sm:px-4 py-3 sm:py-3.5 rounded-xl text-sm sm:text-base cursor-pointer"
+            >
+              <Copy aria-hidden="true" className="size-4" />
+              Copiar e-mail
+            </button>
+          </div>
+          <div className="flex flex-col gap-4 self-center">
+            <a
+              href="https://github.com/nicholasPimenta"
+              className="flex flex-row justify-center items-center gap-2  bg-background-card hover:bg-button-hover border border-accent hover:border-main text-text hover:text-main duration-200 ease-linear px-3 sm:px-4 py-3 sm:py-3.5 rounded-xl text-sm sm:text-base"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <CodeXml aria-hidden="true" className="size-5 sm:size-6" /> Github
+            </a>
+            <a
+              href="https://www.linkedin.com/in/nicholas-pimenta/"
+              className="flex flex-row justify-center items-center gap-2  bg-background-card hover:bg-button-hover border border-accent hover:border-main text-text hover:text-main duration-200 ease-linear px-3 sm:px-4 py-3 sm:py-3.5 rounded-xl text-sm sm:text-base"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <BriefcaseBusiness
+                aria-hidden="true"
+                className="size-5 sm:size-6"
+              />{" "}
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
-  )
+  );
 }
 
 export default Contact;

@@ -29,14 +29,19 @@ function Hero() {
         <a
           href="https://github.com/nicholasPimenta"
           className="flex flex-row justify-center items-center gap-2 bg-transparent hover:bg-button-hover duration-200 ease-linear px-3 sm:px-4 py-3 sm:py-3.5 rounded-xl text-sm sm:text-base"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <CodeXml aria-hidden="true" className="size-5 sm:size-6" /> Github
         </a>
         <a
           href="https://www.linkedin.com/in/nicholas-pimenta/"
           className="flex flex-row justify-center items-center gap-2 bg-transparent hover:bg-button-hover duration-200 ease-linear px-3 sm:px-4 py-3 sm:py-3.5 rounded-xl text-sm sm:text-base"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <BriefcaseBusiness aria-hidden="true" className="size-5 sm:size-6" /> Linkedin
+          <BriefcaseBusiness aria-hidden="true" className="size-5 sm:size-6" />{" "}
+          LinkedIn
         </a>
       </div>
     </section>
