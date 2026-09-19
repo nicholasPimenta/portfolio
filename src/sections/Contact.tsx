@@ -18,7 +18,7 @@ function Contact() {
   };
 
   return (
-    <section id="contato" className="border-b border-line mb-12">
+    <section id="contato" className="border-b border-line">
       <div className="px-6 md:px-11 py-6 mx-auto max-w-6xl">
         <div className="flex flex-row justify-start items-center gap-3 mb-4">
           <span className="border rounded-b-xl rounded-t-[50%] w-10 h-10 grid place-items-center text-accent">

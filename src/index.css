@@ -1,7 +1,9 @@
 @import "tailwindcss";
 
 @layer base {
-  h1, h2, h3 {
+  h1,
+  h2,
+  h3 {
     font-family: "Sora", Arial, sans-serif;
   }
   body {
@@ -10,16 +12,25 @@
     font-family: "Manrope", Arial, sans-serif;
     font-size: 15px;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
 }
 
 @theme {
-  --color-main: #7095FF;
-  --color-accent: #AAC1FF;
-  --color-line: #181F2C;
-  --color-text: #C7D3E9;
-  --color-text-secondary: #B4BFD0;
-  --color-text-button: #07111E;
+  --color-main: #7095ff;
+  --color-accent: #aac1ff;
+  --color-line: #181f2c;
+  --color-text: #c7d3e9;
+  --color-text-secondary: #b4bfd0;
+  --color-text-button: #07111e;
   --color-button-hover: #243854;
   --color-background-card: #172132;
-  --color-border-card: #42577B;
+  --color-border-card: #42577b;
 }
