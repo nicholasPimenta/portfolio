@@ -1,11 +1,14 @@
-import photo from "../assets/images/fotoSobreMim.png";
+import photo from "../assets/images/fotoSobreMim.webp";
 
 function About() {
   return (
     <section id="sobre" className="border-b border-line mb-12">
       <div className="px-6 md:px-11 py-6 mx-auto max-w-6xl">
         <div className="flex flex-row justify-start items-center gap-3 mb-8">
-          <span className="border rounded-b-xl rounded-t-[50%] w-10 h-10 grid place-items-center text-accent">
+          <span
+            aria-hidden="true"
+            className="border rounded-b-xl rounded-t-[50%] w-10 h-10 grid place-items-center text-accent"
+          >
             02
           </span>
           <h2 className="text-xl md:text-3xl font-medium">Sobre mim</h2>
@@ -48,15 +51,27 @@ function About() {
               <h3 className="font-medium tracking-tight text-xl">
                 Tecnologias e ferramentas
               </h3>
-              <p className="flex flex-wrap gap-x-2 leading-[1.65] text-sm md:text-base text-text">
-                <span>HTML, CSS e JavaScript</span>
-                <span className="before:content-['•'] before:mr-2 before:text-accent">TypeScript</span>
-                <span className="before:content-['•'] before:mr-2 before:text-accent">React</span>
-                <span className="before:content-['•'] before:mr-2 before:text-accent">Tailwind CSS</span>
-                <span className="before:content-['•'] before:mr-2 before:text-accent">CSS Modules</span>
-                <span className="before:content-['•'] before:mr-2 before:text-accent">Vite</span>
-                <span className="before:content-['•'] before:mr-2 before:text-accent">Git e GitHub</span>
-              </p>
+              <ul className="flex flex-wrap gap-x-2 leading-[1.65] text-sm md:text-base text-text">
+                <li>HTML, CSS e JavaScript</li>
+                <li className="before:content-['•'] before:mr-2 before:text-accent">
+                  TypeScript
+                </li>
+                <li className="before:content-['•'] before:mr-2 before:text-accent">
+                  React
+                </li>
+                <li className="before:content-['•'] before:mr-2 before:text-accent">
+                  Tailwind CSS
+                </li>
+                <li className="before:content-['•'] before:mr-2 before:text-accent">
+                  CSS Modules
+                </li>
+                <li className="before:content-['•'] before:mr-2 before:text-accent">
+                  Vite
+                </li>
+                <li className="before:content-['•'] before:mr-2 before:text-accent">
+                  Git e GitHub
+                </li>
+              </ul>
             </div>
             <p className="leading-[1.65] text-sm md:text-base text-text">
               Ferramentas de IA, incluindo GitHub Copilot, fazem parte do meu

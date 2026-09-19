@@ -6,12 +6,12 @@ import {
   Maximize2,
   Minimize2,
 } from "lucide-react";
-import formularioPreview from "../assets/images/projects/formularioDeImpressao.png";
-import formularioPdf from "../assets/images/projects/formularioParaImpressao.png";
-import weatherPreview from "../assets/images/projects/weather2.png";
-import lenovoPreview from "../assets/images/projects/gm2ProWhite.png";
-import lenovoBlack from "../assets/images/projects/gm2ProBlack.png";
-import lenovoPage from "../assets/images/projects/gm2Pro.png";
+import formularioPreview from "../assets/images/projects/formularioDeImpressao.webp";
+import formularioPdf from "../assets/images/projects/formularioParaImpressao.webp";
+import weatherPreview from "../assets/images/projects/weather2.webp";
+import lenovoPreview from "../assets/images/projects/gm2ProWhite.webp";
+import lenovoBlack from "../assets/images/projects/gm2ProBlack.webp";
+import lenovoPage from "../assets/images/projects/gm2Pro.webp";
 import { useState } from "react";
 
 function Projects() {
@@ -71,7 +71,10 @@ function Projects() {
     <section id="projetos" className="border-b border-line mb-12">
       <div className="px-6 md:px-11 py-6 mx-auto max-w-6xl">
         <div className="flex flex-row justify-start items-center gap-3 mb-8">
-          <span className="border rounded-b-xl rounded-t-[50%] w-10 h-10 grid place-items-center text-accent">
+          <span
+            aria-hidden="true"
+            className="border rounded-b-xl rounded-t-[50%] w-10 h-10 grid place-items-center text-accent"
+          >
             01
           </span>
           <h2 className="text-xl md:text-3xl font-medium">Projetos</h2>
@@ -97,7 +100,7 @@ function Projects() {
                 type="button"
                 aria-expanded={isImageFormExpanded}
                 aria-controls="form-image"
-                className="text-text md:flex md:items-center md:gap-2 md:py-1 hover:text-text-secondary md:cursor-pointer duration-200 ease-linear hidden"
+                className="text-text md:flex md:items-center md:gap-2 md:py-1 hover:text-text-secondary md:cursor-pointer duration-200 ease-linear hidden w-fit"
                 onClick={
                   isImageFormExpanded ? collapseFormImage : expandFormImage
                 }
@@ -147,6 +150,9 @@ function Projects() {
                   className="border border-accent bg-button-hover hover:bg-border-card text-xs md:text-base px-3 py-2 md:px-4 md:py-3 rounded-xl flex flex-row duration-200 ease-linear gap-2 items-center"
                 >
                   Ver projeto
+                  <span className="sr-only">
+                    : Formulário de Impressão, abre em uma nova aba
+                  </span>
                   <ArrowUpRight aria-hidden="true" className="size-5" />
                 </a>
                 <a
@@ -156,6 +162,9 @@ function Projects() {
                   className="flex flex-row border border-accent hover:bg-border-card text-xs md:text-base px-3 py-2 md:px-4 md:py-3 rounded-xl duration-200 ease-linear gap-2 items-center"
                 >
                   Ver código
+                  <span className="sr-only">
+                    : Formulário de Impressão no GitHub, abre em uma nova aba
+                  </span>
                   <CodeXml aria-hidden="true" className="size-5" />
                 </a>
               </div>
@@ -163,7 +172,7 @@ function Projects() {
                 type="button"
                 aria-expanded={isContentFormExpanded}
                 aria-controls="form-details"
-                className="text-accent flex flex-row items-center gap-2 cursor-pointer text-sm md:text-base"
+                className="text-accent hover:text-text duration-200 ease-linear flex flex-row items-center gap-2 cursor-pointer text-sm md:text-base w-fit"
                 onClick={
                   isContentFormExpanded
                     ? collapseFormContent
@@ -184,7 +193,7 @@ function Projects() {
           <figure id="form-image" hidden={!isImageFormExpanded}>
             <img
               src={formularioPreview}
-              alt="Formulário para impressão com grupos de hábitos de vida, doenças crônicas, histórico familiar e observações preenchidas com dados fictícios."
+              alt=""
               width={1440}
               height={900}
               loading="lazy"
@@ -258,9 +267,10 @@ function Projects() {
                 Do preenchimento à saída A4
               </h4>
               <button
+                type="button"
                 aria-expanded={isDocumentFormExpanded}
                 aria-controls="form-document"
-                className="md:flex md:flex-row md:items-center md:gap-2 md:mx-auto md:my-6 md:cursor-pointer hidden"
+                className="md:flex md:flex-row md:items-center md:gap-2 md:mx-auto md:my-6 md:cursor-pointer hidden hover:text-accent duration-200 ease-linear"
                 onClick={
                   isDocumentFormExpanded
                     ? reduceFormDocument
@@ -314,7 +324,7 @@ function Projects() {
                 type="button"
                 aria-expanded={isImageWeatherExpanded}
                 aria-controls="weather-image"
-                className="text-text md:flex md:items-center md:gap-2 md:py-1 hover:text-text-secondary cursor-pointer duration-200 ease-linear hidden"
+                className="text-text md:flex md:items-center md:gap-2 md:py-1 hover:text-text-secondary cursor-pointer duration-200 ease-linear hidden w-fit"
                 onClick={
                   isImageWeatherExpanded
                     ? collapseWeatherImage
@@ -366,6 +376,9 @@ function Projects() {
                   className="border border-accent bg-button-hover hover:bg-border-card text-xs md:text-base px-3 py-2 md:px-4 md:py-3 rounded-xl flex flex-row duration-200 ease-linear gap-2 items-center"
                 >
                   Ver projeto
+                  <span className="sr-only">
+                    : Weather 2.0, abre em uma nova aba
+                  </span>
                   <ArrowUpRight aria-hidden="true" className="size-5" />
                 </a>
                 <a
@@ -375,6 +388,9 @@ function Projects() {
                   className="flex flex-row border border-accent hover:bg-border-card text-xs md:text-base px-3 py-2 md:px-4 md:py-3 rounded-xl duration-200 ease-linear gap-2 items-center"
                 >
                   Ver código
+                  <span className="sr-only">
+                    : Weather 2,0 no GitHub, abre em uma nova aba
+                  </span>
                   <CodeXml aria-hidden="true" className="size-5" />
                 </a>
               </div>
@@ -382,7 +398,7 @@ function Projects() {
                 type="button"
                 aria-expanded={isContentWeatherExpanded}
                 aria-controls="weather-details"
-                className="text-accent flex flex-row items-center gap-2 cursor-pointer text-sm md:text-base"
+                className="text-accent hover:text-text duration-200 ease-linear flex flex-row items-center gap-2 cursor-pointer text-sm md:text-base w-fit"
                 onClick={
                   isContentWeatherExpanded
                     ? collapseWeatherContent
@@ -403,7 +419,7 @@ function Projects() {
           <figure id="weather-image" hidden={!isImageWeatherExpanded}>
             <img
               src={weatherPreview}
-              alt="Weather 2.0 mostrando Rio de Janeiro, 23 graus, céu nublado e previsão dos próximos dias sobre um fundo de nuvens."
+              alt=""
               width={1440}
               height={900}
               loading="lazy"
@@ -490,7 +506,7 @@ function Projects() {
                 type="button"
                 aria-expanded={isImageLenovoExpanded}
                 aria-controls="lenovo-image"
-                className="text-text md:flex md:items-center md:gap-2 md:py-1 hover:text-text-secondary cursor-pointer duration-200 ease-linear hidden"
+                className="text-text md:flex md:items-center md:gap-2 md:py-1 hover:text-text-secondary cursor-pointer duration-200 ease-linear hidden w-fit"
                 onClick={
                   isImageLenovoExpanded
                     ? collapseLenovoImage
@@ -542,6 +558,9 @@ function Projects() {
                   className="border border-accent bg-button-hover hover:bg-border-card text-xs md:text-base px-3 py-2 md:px-4 md:py-3 rounded-xl flex flex-row duration-200 ease-linear gap-2 items-center"
                 >
                   Ver projeto
+                  <span className="sr-only">
+                    : Lenovo GM2 Pro, abre em uma nova aba
+                  </span>
                   <ArrowUpRight aria-hidden="true" className="size-5" />
                 </a>
                 <a
@@ -551,6 +570,9 @@ function Projects() {
                   className="flex flex-row border border-accent hover:bg-border-card text-xs md:text-base px-3 py-2 md:px-4 md:py-3 rounded-xl duration-200 ease-linear gap-2 items-center"
                 >
                   Ver código
+                  <span className="sr-only">
+                    : Lenovo GM2 Pro no GitHub, abre em uma nova aba
+                  </span>
                   <CodeXml aria-hidden="true" className="size-5" />
                 </a>
               </div>
@@ -558,7 +580,7 @@ function Projects() {
                 type="button"
                 aria-expanded={isContentLenovoExpanded}
                 aria-controls="lenovo-details"
-                className="text-accent flex flex-row items-center gap-2 cursor-pointer text-sm md:text-base"
+                className="text-accent hover:text-text duration-200 ease-linear flex flex-row items-center gap-2 cursor-pointer text-sm md:text-base w-fit"
                 onClick={
                   isContentLenovoExpanded
                     ? collapseLenovoContent
@@ -579,7 +601,7 @@ function Projects() {
           <figure id="lenovo-image" hidden={!isImageLenovoExpanded}>
             <img
               src={lenovoPreview}
-              alt="Página conceitual Lenovo GM2 Pro com fones brancos em destaque e seleção entre as versões branca e preta."
+              alt=""
               width={1440}
               height={900}
               loading="lazy"

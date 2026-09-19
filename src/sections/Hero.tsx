@@ -32,7 +32,9 @@ function Hero() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <CodeXml aria-hidden="true" className="size-5 sm:size-6" /> GitHub
+          <CodeXml aria-hidden="true" className="size-5 sm:size-6" />
+          GitHub
+          <span className="sr-only">, abre em uma nova aba</span>
         </a>
         <a
           href="https://www.linkedin.com/in/nicholas-pimenta/"
@@ -42,6 +44,7 @@ function Hero() {
         >
           <BriefcaseBusiness aria-hidden="true" className="size-5 sm:size-6" />{" "}
           LinkedIn
+          <span className="sr-only">, abre em uma nova aba</span>
         </a>
       </div>
     </section>

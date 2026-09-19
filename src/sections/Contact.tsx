@@ -21,7 +21,10 @@ function Contact() {
     <section id="contato" className="border-b border-line">
       <div className="px-6 md:px-11 py-6 mx-auto max-w-6xl">
         <div className="flex flex-row justify-start items-center gap-3 mb-4">
-          <span className="border rounded-b-xl rounded-t-[50%] w-10 h-10 grid place-items-center text-accent">
+          <span
+            aria-hidden="true"
+            className="border rounded-b-xl rounded-t-[50%] w-10 h-10 grid place-items-center text-accent"
+          >
             03
           </span>
           <h2 className="text-xl md:text-3xl font-medium">Contato</h2>
@@ -39,7 +42,7 @@ function Contact() {
               onClick={copyEmail}
               onMouseLeave={resetCopyMessage}
               onBlur={resetCopyMessage}
-              className="flex flex-row justify-center items-center gap-2  bg-button-hover hover:bg-background-card border border-main hover:border-accent text-main hover:text-text duration-200 ease-linear px-3 sm:px-4 py-3 sm:py-3.5 rounded-xl text-sm sm:text-base cursor-pointer w-full"
+              className="flex flex-row justify-center items-center gap-2  bg-button-hover hover:bg-background-card border border-main hover:border-accent text-accent hover:text-text duration-200 ease-linear px-3 sm:px-4 py-3 sm:py-3.5 rounded-xl text-sm sm:text-base cursor-pointer w-full"
             >
               {copy === "E-mail copiado." ? (
                 <Check aria-hidden="true" className="size-4" />
@@ -56,7 +59,9 @@ function Contact() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <CodeXml aria-hidden="true" className="size-5 sm:size-6" /> GitHub
+              <CodeXml aria-hidden="true" className="size-5 sm:size-6" />
+              GitHub
+              <span className="sr-only">, abre em uma nova aba</span>
             </a>
             <a
               href="https://www.linkedin.com/in/nicholas-pimenta/"
@@ -69,6 +74,7 @@ function Contact() {
                 className="size-5 sm:size-6"
               />{" "}
               LinkedIn
+              <span className="sr-only">, abre em uma nova aba</span>
             </a>
           </div>
         </div>
