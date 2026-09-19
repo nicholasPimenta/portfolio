@@ -1,6 +1,22 @@
-import { BriefcaseBusiness, CodeXml, Copy } from "lucide-react";
+import { BriefcaseBusiness, Check, CodeXml, Copy } from "lucide-react";
+import { useState } from "react";
+
+const email = "nicholas2ilva@gmail.com";
 
 function Contact() {
+  const [copy, setCopy] = useState("");
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(email);
+      setCopy("E-mail copiado.");
+    } catch {
+      setCopy("Falha ao copiar.");
+    }
+  };
+  const resetCopyMessage = () => {
+    setCopy("");
+  };
+
   return (
     <section id="contato" className="border-b border-line mb-12">
       <div className="px-6 md:px-11 py-6 mx-auto max-w-6xl">
@@ -15,25 +31,32 @@ function Contact() {
             Tem uma oportunidade em Front-End?
           </h3>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-32">
-          <div className="flex flex-col gap-4 items-start justify-start self-center">
-            <p className="text-xl text-text">nicholas2ilva@gmail.com</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-0">
+          <div className="flex flex-col gap-4 items-start justify-center self-stretch border-b border-border-card pb-8 md:border-b-0 md:border-r md:border-r-border-card md:pb-0 md:pr-8">
+            <p className="text-xl text-text">{email}</p>
             <button
               type="button"
-              className="flex flex-row justify-center items-center gap-2  bg-button-hover hover:bg-background-card border border-main hover:border-accent text-main hover:text-text duration-200 ease-linear px-3 sm:px-4 py-3 sm:py-3.5 rounded-xl text-sm sm:text-base cursor-pointer"
+              onClick={copyEmail}
+              onMouseLeave={resetCopyMessage}
+              onBlur={resetCopyMessage}
+              className="flex flex-row justify-center items-center gap-2  bg-button-hover hover:bg-background-card border border-main hover:border-accent text-main hover:text-text duration-200 ease-linear px-3 sm:px-4 py-3 sm:py-3.5 rounded-xl text-sm sm:text-base cursor-pointer w-full"
             >
-              <Copy aria-hidden="true" className="size-4" />
-              Copiar e-mail
+              {copy === "E-mail copiado." ? (
+                <Check aria-hidden="true" className="size-4" />
+              ) : (
+                <Copy aria-hidden="true" className="size-4" />
+              )}
+              <span aria-live="polite">{copy || "Copiar e-mail"}</span>
             </button>
           </div>
-          <div className="flex flex-col gap-4 self-center">
+          <div className="flex flex-col gap-4 justify-center self-stretch md:pl-8">
             <a
               href="https://github.com/nicholasPimenta"
               className="flex flex-row justify-center items-center gap-2  bg-background-card hover:bg-button-hover border border-accent hover:border-main text-text hover:text-main duration-200 ease-linear px-3 sm:px-4 py-3 sm:py-3.5 rounded-xl text-sm sm:text-base"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <CodeXml aria-hidden="true" className="size-5 sm:size-6" /> Github
+              <CodeXml aria-hidden="true" className="size-5 sm:size-6" /> GitHub
             </a>
             <a
               href="https://www.linkedin.com/in/nicholas-pimenta/"

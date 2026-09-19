@@ -32,7 +32,7 @@ function Hero() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <CodeXml aria-hidden="true" className="size-5 sm:size-6" /> Github
+          <CodeXml aria-hidden="true" className="size-5 sm:size-6" /> GitHub
         </a>
         <a
           href="https://www.linkedin.com/in/nicholas-pimenta/"
