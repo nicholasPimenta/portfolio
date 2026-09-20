@@ -1,4 +1,4 @@
-import { BriefcaseBusiness, Check, CodeXml, Copy } from "lucide-react";
+import { BriefcaseBusiness, Check, CodeXml, Copy, Notebook } from "lucide-react";
 import { useState } from "react";
 
 const email = "nicholas2ilva@gmail.com";
@@ -74,6 +74,19 @@ function Contact() {
                 className="size-5 sm:size-6"
               />{" "}
               LinkedIn
+              <span className="sr-only">, abre em uma nova aba</span>
+            </a>
+            <a
+              href="/curriculo"
+              className="flex flex-row justify-center items-center gap-2  bg-background-card hover:bg-button-hover border border-accent hover:border-main text-text hover:text-main duration-200 ease-linear px-3 sm:px-4 py-3 sm:py-3.5 rounded-xl text-sm sm:text-base"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Notebook
+                aria-hidden="true"
+                className="size-5 sm:size-6"
+              />{" "}
+              Currículo
               <span className="sr-only">, abre em uma nova aba</span>
             </a>
           </div>

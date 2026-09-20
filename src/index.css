@@ -6,6 +6,7 @@
   h3 {
     font-family: "Sora", Arial, sans-serif;
   }
+
   body {
     background-color: #0c1018;
     color: #fefefe;
@@ -16,14 +17,119 @@
   html {
     scroll-behavior: smooth;
   }
+
+  address {
+    font-style: normal;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     html {
       scroll-behavior: auto;
     }
   }
+
   :where(a, button, summary):focus-visible {
     outline: 2px solid var(--color-accent);
     outline-offset: 4px;
+  }
+}
+
+.resume-page a {
+  overflow-wrap: anywhere;
+}
+
+@page {
+  size: A4;
+  margin: 12mm;
+}
+
+@media print {
+  html,
+  body {
+    background: #ffffff !important;
+  }
+
+  body {
+    color: #111827 !important;
+    font-size: 9pt;
+    line-height: 1.35;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .resume-actions {
+    display: none !important;
+  }
+
+  .resume-shell {
+    min-height: auto !important;
+    padding: 0 !important;
+  }
+
+  .resume-page {
+    max-width: none !important;
+    overflow: visible !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+  }
+
+  .resume-header {
+    border-color: #cbd5e1 !important;
+    padding: 0 0 10pt !important;
+  }
+
+  .resume-section {
+    border-color: #cbd5e1 !important;
+    padding: 8pt 0 !important;
+  }
+
+  .resume-badge {
+    display: none !important;
+  }
+
+  .resume-contact {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 2pt 12pt !important;
+    margin-top: 8pt !important;
+  }
+
+  .resume-courses {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .resume-page h1 {
+    color: #0f172a !important;
+    font-size: 22pt !important;
+  }
+
+  .resume-page h2 {
+    color: #1d4ed8 !important;
+    font-size: 11pt !important;
+  }
+
+  .resume-page h3 {
+    color: #0f172a !important;
+    font-size: 9.5pt !important;
+  }
+
+  .resume-page p,
+  .resume-page li,
+  .resume-page time,
+  .resume-page address,
+  .resume-page strong {
+    color: #111827 !important;
+  }
+
+  .resume-page a {
+    color: #1d4ed8 !important;
+    text-decoration: none !important;
+  }
+
+  .resume-entry {
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
 }
 

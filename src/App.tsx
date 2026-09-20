@@ -1,11 +1,12 @@
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Curriculo from "./Curriculo";
 import About from "./sections/About";
 import Contact from "./sections/Contact";
 import Hero from "./sections/Hero";
 import Projects from "./sections/Projects";
 
-function App() {
+function Home() {
   return (
     <>
       <a
@@ -24,6 +25,16 @@ function App() {
       <Footer />
     </>
   );
+}
+
+function App() {
+  const path = window.location.pathname.replace(/\/$/, "");
+
+  if (path === "/curriculo") {
+    return <Curriculo />
+  }
+
+  return <Home />;
 }
 
 export default App;

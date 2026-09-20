@@ -1,4 +1,4 @@
-import { ArrowDown, BriefcaseBusiness, CodeXml } from "lucide-react";
+import { ArrowDown, BriefcaseBusiness, CodeXml, Notebook } from "lucide-react";
 
 function Hero() {
   return (
@@ -28,7 +28,7 @@ function Hero() {
       <div className="flex flex-row gap-2 justify-center items-center border-b border-line pb-12 sm:pb-16">
         <a
           href="https://github.com/nicholasPimenta"
-          className="flex flex-row justify-center items-center gap-2 bg-transparent hover:bg-button-hover duration-200 ease-linear px-3 sm:px-4 py-3 sm:py-3.5 rounded-xl text-sm sm:text-base"
+          className="flex flex-row justify-center items-center gap-2 bg-transparent hover:bg-button-hover duration-200 ease-linear px-2 sm:px-4 py-2 sm:py-3.5 rounded-xl text-sm sm:text-base"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -38,12 +38,22 @@ function Hero() {
         </a>
         <a
           href="https://www.linkedin.com/in/nicholas-pimenta/"
-          className="flex flex-row justify-center items-center gap-2 bg-transparent hover:bg-button-hover duration-200 ease-linear px-3 sm:px-4 py-3 sm:py-3.5 rounded-xl text-sm sm:text-base"
+          className="flex flex-row justify-center items-center gap-2 bg-transparent hover:bg-button-hover duration-200 ease-linear px-2 sm:px-4 py-2 sm:py-3.5 rounded-xl text-sm sm:text-base"
           target="_blank"
           rel="noopener noreferrer"
         >
           <BriefcaseBusiness aria-hidden="true" className="size-5 sm:size-6" />{" "}
           LinkedIn
+          <span className="sr-only">, abre em uma nova aba</span>
+        </a>
+        <a
+          href="/curriculo"
+          className="flex flex-row justify-center items-center gap-2 bg-transparent hover:bg-button-hover duration-200 ease-linear px-2 sm:px-4 py-2 sm:py-3.5 rounded-xl text-sm sm:text-base"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Notebook aria-hidden="true" className="size-5 sm:size-6" />{" "}
+          Currículo
           <span className="sr-only">, abre em uma nova aba</span>
         </a>
       </div>
