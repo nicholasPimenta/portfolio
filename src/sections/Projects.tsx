@@ -257,9 +257,10 @@ function Projects() {
                 Estado atual
               </h4>
               <p className="tracking-tight leading-[1.65] text-sm md:text-base font-normal">
-                A demonstração utiliza identidade e informações provisórias. O
-                teste final de impressão e o envio de logo e telefone ainda
-                aguardam retorno do solicitante.
+                A demonstração utiliza identidade visual e informações
+                provisórias. O desenvolvimento foi concluído; a validação da
+                impressão e a aplicação da identidade definitiva permanecem
+                suspensas por ausência de retorno do solicitante.
               </p>
             </div>
             <figure className="col-span-1 md:col-span-2 flex flex-col justify-center items-center">
