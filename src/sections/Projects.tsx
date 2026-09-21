@@ -144,7 +144,7 @@ function Projects() {
               </ul>
               <div className="flex flex-row justify-start gap-4 items-center">
                 <a
-                  href="https://clinica-dashboard-seven.vercel.app/"
+                  href="https://clinica-dashboard-live.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="border border-accent bg-button-hover hover:bg-border-card text-xs md:text-base px-3 py-2 md:px-4 md:py-3 rounded-xl flex flex-row duration-200 ease-linear gap-2 items-center"
@@ -370,7 +370,7 @@ function Projects() {
               </ul>
               <div className="flex flex-row justify-start gap-4 items-center">
                 <a
-                  href="https://weather-20-olive.vercel.app/"
+                  href="https://weather-20-live.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="border border-accent bg-button-hover hover:bg-border-card text-xs md:text-base px-3 py-2 md:px-4 md:py-3 rounded-xl flex flex-row duration-200 ease-linear gap-2 items-center"
